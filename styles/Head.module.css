@@ -1,0 +1,145 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 10%;
+  background-color: #e8f7fc; /* Light blue background */
+  position: relative;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.textSection {
+  flex: 1;
+}
+
+.textSection h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #023047; /* Dark text color */
+  margin-bottom: 10px;
+}
+
+.textSection .highlight {
+  color: #0077b6; /* Blue highlight */
+}
+
+.textSection .subTitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #6c757d; /* Gray subtitle */
+  margin-bottom: 10px;
+}
+
+.textSection .description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #495057;
+}
+
+.exploreButton {
+  padding: 10px 20px;
+  background-color: #0077b6; /* Blue button */
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.exploreButton:hover {
+  background-color: #005f8a;
+}
+
+.imageWrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImage {
+  position: relative;
+  z-index: 2;
+}
+
+.imageWrapper::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  background-color: #ffd166; /* Yellow background behind image */
+ 
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.features {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #023047; /* Icon color */
+}
+
+.feature h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #023047;
+}
+
+.feature p {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .imageWrapper::before {
+    display: none;
+  }
+
+  .features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .feature {
+    flex: 1 1 45%;
+  }
+}

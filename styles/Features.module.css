@@ -1,0 +1,54 @@
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px;
+  background-color: #023047; /* Dark blue background */
+  border-radius: 20px; /* Rounded container */
+}
+
+.feature {
+  text-align: center;
+  width: 30%; /* Adjust width to fit 3 items in a row */
+  margin: 20px 0;
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px; /* Circle size */
+  height: 80px;
+  background-color: white; /* White circular background */
+  border-radius: 50%; /* Make it round */
+  margin: 0 auto 15px; /* Center icon and add space below */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.icon {
+  font-size: 32px; /* Icon size */
+  color: #023047; /* Icon color matching theme */
+}
+
+.feature h2 {
+  font-size: 1.2rem;
+  color: white; /* White heading text */
+  margin: 10px 0;
+}
+
+.feature p {
+  font-size: 0.9rem;
+  color: #dce7f1; /* Light gray text for descriptions */
+}
+
+@media (max-width: 768px) {
+  .feature {
+    width: 45%; /* Adjust for tablets and smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .feature {
+    width: 100%; /* Full width for mobile screens */
+  }
+}
